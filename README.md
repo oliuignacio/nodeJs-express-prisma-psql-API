@@ -2,29 +2,29 @@
 
 # Build APIs with Node.js
 
-Welcome to the "Build APIs with Node.js" course on Frontend Masters! In this course, you will learn how to design and build robust APIs using Node.js, Express, Prisma, TypeScript, and JWT authentication. You'll also discover how to deploy your API using the Render platform.
+Welcome to the "Build APIs with Node.js" course on Frontend Masters! In this course, you will find comprehensive material on designing and building robust APIs using Node.js, Express, Prisma, TypeScript, and JWT authentication. It also covers deployment using the Render platform.
 
 ## Course Overview
 
-In this course, you will cover the following topics:
+This course material covers the following topics:
 
-1. Building an API using Express: You'll learn how to handle routes and create a RESTful API using the Express framework in Node.js.
+1. Building an API using Express: You will explore how to handle routes and create a RESTful API using the Express framework in Node.js.
 
-2. Database Integration with Postgres and Prisma: You'll explore how to interact with a Postgres database using Prisma, which provides an ORM for seamless database operations.
+2. Database Integration with Postgres and Prisma: The course covers the integration of a Postgres database using Prisma, which provides an ORM for seamless database operations.
 
-3. Adding Authentication with JWTs: You'll implement JWT-based authentication to secure your API endpoints and protect sensitive data.
+3. Adding Authentication with JWTs: You will learn how to implement JWT-based authentication to secure API endpoints and protect sensitive data.
 
-4. Deployment with Render: You'll learn how to deploy your API to the Render platform, a managed hosting solution for Node.js applications.
+4. Deployment with Render: The course material guides you through the deployment process using the Render platform, a managed hosting solution for Node.js applications.
 
 ## Tools and Technologies
 
-To follow along with this course, you'll need the following tools and technologies:
+To follow along with this course, you will need the following tools and technologies:
 
-- Node.js: We'll be using Node.js as our runtime environment, leveraging its rich ecosystem and familiarity with JavaScript.
+- Node.js: We'll be using Node.js as the runtime environment, leveraging its rich ecosystem and familiarity with JavaScript.
 
 - Express: Express is a popular and lightweight framework for building web applications and APIs in Node.js.
 
-- Postgres: We'll use Postgres as our database of choice for its widespread adoption and extensive deployment options.
+- Postgres: The course utilizes Postgres as the database of choice for its widespread adoption and extensive deployment options.
 
 - Prisma: Prisma is an ORM (Object-Relational Mapping) tool that simplifies database interaction and supports multiple databases, including Postgres.
 
@@ -36,13 +36,13 @@ To follow along with this course, you'll need the following tools and technologi
 
 ## Folder Structure
 
-To organize your project as you progress through the course, you can follow the suggested folder structure:
+To organize the project material while following the course, you can utilize the suggested folder structure:
 
 - `00. Notes`: This folder contains your personal notes in a word document or any other preferred format.
 
-- `01. vanillaNodeAPI`: In this folder, you can create a basic Node.js project without any frameworks or external libraries. It will serve as a starting point for learning the fundamentals.
+- `01. vanillaNodeAPI`: This folder represents a basic Node.js project without any frameworks or external libraries, which serves as a starting point to learn the fundamentals.
 
-- `02. Project`: This folder will hold the actual application that you build throughout the course. Here, you'll implement Express, integrate with Postgres using Prisma, add authentication with JWTs, and deploy to Render.
+- `02. Project`: The actual application that you build throughout the course resides in this folder. Here, you'll implement Express, integrate with Postgres using Prisma, add authentication with JWTs, and deploy to Render.
 
 Feel free to modify the folder structure to suit your preferences or project requirements.
 
@@ -58,4 +58,4 @@ This course content is provided under the [MIT License](https://opensource.org/l
 
 ---
 
-Start building powerful APIs with Node.js and unlock the potential of your web applications! Happy coding!
+Get ready to explore the world of building powerful APIs with Node.js and unlock the potential of your web applications! Happy coding!
