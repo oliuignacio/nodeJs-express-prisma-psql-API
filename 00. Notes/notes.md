@@ -46,7 +46,7 @@ This installs the Prisma CLI, which is responsible for managing migrations.
 
 - Create a schema file (e.g., `schema.prisma`) to define the data models.
 - Example schema definition:
-``prisma
+```prisma
 model User {
   id        String    @id @default(uuid())
   createdAt DateTime  @default(now())
@@ -60,7 +60,8 @@ model Product {
   belongsToId String
   belongsTo   User     @relation(fields: [belongsToId], references: [id])
   updates     Update[]
-}``
+}```
+
 -Use Prisma CLI to generate the Prisma client and ensure the database is in sync with the ORM:
 `npx prisma migrate dev --name init`
 
