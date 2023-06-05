@@ -46,8 +46,7 @@ This installs the Prisma CLI, which is responsible for managing migrations.
 
 - Create a schema file (e.g., `schema.prisma`) to define the data models.
 - Example schema definition:
-```
-prisma
+```prisma
 model User {
   id        String    @id @default(uuid())
   createdAt DateTime  @default(now())
