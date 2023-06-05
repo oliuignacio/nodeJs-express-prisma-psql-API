@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Request, Response, Router } from 'express';
 
 const router = Router();
 
@@ -7,8 +7,8 @@ const router = Router();
  * Product routes
  */
 
-router.get('/product', (req, res) => {
-  res.json({message: 'Hello from product'});
+router.get('/product', (req: any, res: Response) => {
+  res.json({message: 'message'});
 });
 router.get('/product/:id', () => {});
 router.put('/product/:id', () => {});
