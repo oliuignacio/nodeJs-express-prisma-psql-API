@@ -35,3 +35,42 @@ Course Link: [API Design and Implementation in Node.js V4](https://hendrixer.git
 - **ORM**: Object-Relational Mapping, a library or SDK that allows interaction with the database without writing raw SQL queries.
 - **Prisma**: A typesafe ORM that supports multiple databases. It provides powerful features for schema creation, data querying, and even handles migrations.
 - To get started with Prisma, install the required dependencies:
+`npm i typescript ts-node @types/node prisma --save-dev`
+- Initialize Prisma using the following command:
+`npx prisma init`
+This installs the Prisma CLI, which is responsible for managing migrations.
+- Install the Prisma ORM library:
+`npm i @prisma/client --save`
+
+## Data Modelling
+
+- Create a schema file (e.g., `schema.prisma`) to define the data models.
+- Example schema definition:
+``prisma
+model User {
+  id        String    @id @default(uuid())
+  createdAt DateTime  @default(now())
+  username  String    @unique
+  password  String
+}
+model Product {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  name      String   @db.VarChar(255)
+  belongsToId String
+  belongsTo   User     @relation(fields: [belongsToId], references: [id])
+  updates     Update[]
+}``
+-Use Prisma CLI to generate the Prisma client and ensure the database is in sync with the ORM:
+`npx prisma migrate dev --name init`
+
+## Migrations
+- Migrations are used to synchronize the database with the schema and handle changes to the existing data.
+- Prisma provides a CLI for managing migrations.
+- To generate a new migration, use the following command:
+`npx prisma migrate dev --name <migration-name>`
+- To reset the database and apply migrations from scratch:
+`npx prisma migrate reset`
+
+
+
