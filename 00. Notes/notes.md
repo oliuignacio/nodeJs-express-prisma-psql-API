@@ -102,7 +102,7 @@ app.use(express.urlencoded({ extended: true })); // Allows clients to send a que
 ```
 
 You can also use middleware functions in a stack-like manner using the compose() function, as shown below:
-```express
+```node
   app.use(compose(
   function(req, res, next) {
     // Middleware 1
@@ -136,7 +136,7 @@ To use JWT for authentication, follow these steps:
 
 Here's an example of loading environment variables from the .env file:
 
-```
+```javascript
 dotenv.config();
 ```
 
