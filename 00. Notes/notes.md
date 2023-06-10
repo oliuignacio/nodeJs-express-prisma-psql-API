@@ -77,21 +77,21 @@ model Product {
 
 ## Routes and Middleware
 
-To implement CRUD operations for every resource we've created, we need to define routes following the REST pattern. However, when one resource depends on another, the REST pattern may not work as expected.
+- To implement CRUD operations for every resource we've created, we need to define routes following the REST pattern. However, when one resource depends on another, the REST pattern may not work as expected.
 
-In our application, the entire API is represented by the app, and the router is a sub-part of it. You can have multiple routers to organize your routes efficiently.
+- In our application, the entire API is represented by the app, and the router is a sub-part of it. You can have multiple routers to organize your routes efficiently.
 
-When defining routes, keep in mind that `PUT` replaces the complete resource, while `PATCH` updates only specific properties.
+- When defining routes, keep in mind that `PUT` replaces the complete resource, while `PATCH` updates only specific properties.
 
-Unlike some other frameworks, Node.js does not provide built-in tools to generate routes automatically. However, there are CLI tools available that can assist in generating routes based on your schema and the desired CRUD methods.
+- Unlike some other frameworks, Node.js does not provide built-in tools to generate routes automatically. However, there are CLI tools available that can assist in generating routes based on your schema and the desired CRUD methods.
 
 Note: The course does not use nodemon, but you can add it to automatically restart the server whenever changes are made.
 
-Middleware functions are functions that run before route handlers. They provide a way to add additional functionality to the request-response cycle.
+- Middleware functions are functions that run before route handlers. They provide a way to add additional functionality to the request-response cycle.
 
-You can use middleware functions for various purposes, such as logging requests (e.g., using morgan), error handling, or authentication. Middlewares can also add custom data or properties to the `request` object.
+- You can use middleware functions for various purposes, such as logging requests (e.g., using morgan), error handling, or authentication. Middlewares can also add custom data or properties to the `request` object.
 
-To define middleware in your application, you can use the `app.use()` method. The `next()` function is used to move to the next middleware in the stack, which can be a handler or another middleware.
+- To define middleware in your application, you can use the `app.use()` method. The `next()` function is used to move to the next middleware in the stack, which can be a handler or another middleware.
 
 Here's an example of setting up middleware in an Express application:
 
@@ -102,6 +102,7 @@ app.use(express.urlencoded({ extended: true })); // Allows clients to send a que
 ```
 
 You can also use middleware functions in a stack-like manner using the compose() function, as shown below:
+
 ```app.use(compose(
   function(req, res, next) {
     // Middleware 1
@@ -115,16 +116,16 @@ You can also use middleware functions in a stack-like manner using the compose()
 ));
 ```
 
-CORS (Cross-Origin Resource Sharing) is a configuration that you put in the server to specify which origins or domains are allowed to access the API resources. It helps in controlling access to your API from different domains or origins.
+- CORS (Cross-Origin Resource Sharing) is a configuration that you put in the server to specify which origins or domains are allowed to access the API resources. It helps in controlling access to your API from different domains or origins.
 
-CORS preflight checks whether a user is allowed to interact with the API. It is an essential security measure to protect against cross-origin attacks.
+- CORS preflight checks whether a user is allowed to interact with the API. It is an essential security measure to protect against cross-origin attacks.
 
 
 ##Authentication
 
-In our application, the database is multitenant, meaning we don't have a separate database for each user. Instead, we handle authentication using JSON Web Tokens (JWT).
+- In our application, the database is multitenant, meaning we don't have a separate database for each user. Instead, we handle authentication using JSON Web Tokens (JWT).
 
-JWT is a secure way to authenticate users by generating a token based on a secret and a JavaScript object. This token is sent by the client with every request, allowing the server to verify the authenticity of the user.
+- JWT is a secure way to authenticate users by generating a token based on a secret and a JavaScript object. This token is sent by the client with every request, allowing the server to verify the authenticity of the user.
 
 To use JWT for authentication, follow these steps:
 
@@ -134,6 +135,7 @@ To use JWT for authentication, follow these steps:
 4. On the server-side, verify the JWT and extract the user information from it.
 
 Here's an example of loading environment variables from the .env file:
+
 ```
 dotenv.config();
 ```
