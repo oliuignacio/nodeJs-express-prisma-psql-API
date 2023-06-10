@@ -102,8 +102,8 @@ app.use(express.urlencoded({ extended: true })); // Allows clients to send a que
 ```
 
 You can also use middleware functions in a stack-like manner using the compose() function, as shown below:
-
-```app.use(compose(
+```express
+  app.use(compose(
   function(req, res, next) {
     // Middleware 1
   },
