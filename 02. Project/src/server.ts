@@ -6,19 +6,14 @@ import express, { NextFunction, Request, Response } from 'express';
 import router from './router';
 import morgan from 'morgan';
 import cors from 'cors';
+import { protect } from './modules/auth';
 
 const app = express();
-
-const customLogger = (message) => (req, res, next) => {
-  console.log(`Hello from ${message}`)
-  next()
-}
 
 app.use(cors())
 app.use(morgan('dev'));
 app.use(express.json()); //allows a client to send json
 app.use(express.urlencoded({extended: true})); // allows a client to send a query string like 'google.com?a=1,thing=otherthing'
-app.use(customLogger('custom logger'))
 
 app.get('/', (req: Request, res: Response)=> {
   console.log("Hello from express");
@@ -28,7 +23,7 @@ app.get('/', (req: Request, res: Response)=> {
   
 } )
 
-app.use('/api', router);
+app.use('/api', protect, router);
 
 
 
