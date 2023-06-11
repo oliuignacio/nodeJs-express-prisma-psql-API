@@ -142,4 +142,7 @@ dotenv.config();
 
 Storing the JWT in a cookie is beneficial from the client's perspective as it eliminates the need to manage the token manually. However, from the backend's perspective, it is more appropriate to use the Authorization header for authentication.
 
+You might also consider implementing middleware for rate limiting to prevent excessive requests from reaching your database. This can't help protect your server's resources. Ideally, rate limiting should be handled at the network layer to prevent requests from reaching your server altogether.
+
+
 
