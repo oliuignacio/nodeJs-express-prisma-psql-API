@@ -8,7 +8,7 @@ Welcome to the "Build APIs with Node.js" course on Frontend Masters! In this cou
 
 This course material covers the following topics:
 
-1. Building an API using Express: You will explore how to handle routes and create a RESTful API using the Express framework in Node.js.
+1. Building an API using Express: You will explore how to handle routes and create a RESTful API using the Express framework in Node.js. 
 
 2. Database Integration with Postgres and Prisma: The course covers the integration of a Postgres database using Prisma, which provides an ORM for seamless database operations.
 
