@@ -26,6 +26,7 @@ model Product {
   belongsToId String
   belongsTo   User     @relation(fields: [belongsToId], references: [id])
   updates     Update[]
+  //@@index([id, belongsToId]) pro tip to make it more efficient when search prod by id and belongs to user
 }
 
 enum UPDATE_STATUSES {
