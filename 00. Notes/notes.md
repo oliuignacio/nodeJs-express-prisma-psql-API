@@ -2,7 +2,7 @@
 
 This document serves as a collection of notes for the Frontend Masters course on building APIs with Node.js V4.
 
-Course Link: [API Design and Implementation in Node.js V4](https://hendrixer.github.io/API-design-v4/)
+Course Link: [API Design and Implementation in Node.js V4](https://hendrixer.github.io/API-design-v4/) 
 
 ## Table of Contents
 
